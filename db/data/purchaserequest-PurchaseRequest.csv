@@ -1,0 +1,4 @@
+ID;description;amount;status;supplier_ID;costCenter_code;createdAt;createdBy
+aaaaaaaa-0001-0001-0001-aaaaaaaaaaaa;Laptops para nuevos developers;12500.00;PENDING;11111111-1111-1111-1111-111111111111;CC-200;2026-05-10T09:00:00Z;admin
+aaaaaaaa-0002-0002-0002-aaaaaaaaaaaa;Campania Google Ads Q2;3500.00;APPROVED;22222222-2222-2222-2222-222222222222;CC-100;2026-05-12T11:30:00Z;admin
+aaaaaaaa-0003-0003-0003-aaaaaaaaaaaa;Servidor de desarrollo;850.00;DRAFT;33333333-3333-3333-3333-333333333333;CC-300;2026-05-14T15:00:00Z;admin
