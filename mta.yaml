@@ -24,7 +24,6 @@ modules:
         properties:
           srv-url: ${default-url}
     requires:
-      # - name: purchase-request-app-auth
       - name: purchase-request-app-db
       - name: purchase-request-app-destination
 
@@ -37,19 +36,6 @@ modules:
       - name: purchase-request-app-db
 
 resources:
-  # - name: purchase-request-app-auth
-  #   type: org.cloudfoundry.managed-service
-  #   parameters:
-  #     service: xsuaa
-  #     service-plan: application
-  #     path: ./xs-security.json
-  #     config:
-  #       xsappname: purchase-request-app-${org}-${space}
-  #       tenant-mode: dedicated
-  #       oauth2-configuration:
-  #         credential-types:
-  #           - "binding-secret"
-  #           - "x509"
   - name: purchase-request-app-db
     type: com.sap.xs.hdi-container
     parameters:
