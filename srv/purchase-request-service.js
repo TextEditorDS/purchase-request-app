@@ -6,7 +6,11 @@ module.exports = (srv) => {
         req.error(400, "No trabajamos con montos astronomicos! Paga más plata!", 'amount');
     }
   });
-  srv.before('READ', 'PurchaseRequests', (req) => {
-    console.log("Alguien está leyendo las solicitudes de compra...");
+  srv.after('READ', 'PurchaseRequests', (results) => {
+    const items = Array.isArray(results) ? results : [results];
+    for(const pr of items){
+        pr.isUrgent = pr.amount > 5000;
+        pr.totalWithTaxSrv = pr.amount ? (pr.amount * 1.21).toFixed(2) : 0;
+    }
   });
 };

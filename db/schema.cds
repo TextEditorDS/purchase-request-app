@@ -22,3 +22,8 @@ entity CostCenter {
    key code : String(10);
    name    : String(80);
 }
+
+extend entity PurchaseRequest with {
+    virtual isUrgent : Boolean;
+    virtual totalWithTaxSrv : Decimal(15,2);
+}
